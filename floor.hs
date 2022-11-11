@@ -1,16 +1,10 @@
-{-# LANGUAGE
-  NoCUSKs
-, NoDatatypeContexts
-, NoFieldSelectors
-, NoMonomorphismRestriction
-, NoNPlusKPatterns
-, NoNondecreasingIndentation
-, NoStarIsType
-, NoTraditionalRecordSyntax  #-}
+-- take user input for price per unit, length and width of flooring required
+-- compute the area and then multiply by price
+-- TODO: create safe types (change from Float/Double), get user input instead of hard coding
+-- allow for geometric shape of floor, build api response, GUI front end (html?)
+-- expand on measuring unit (Allow more than just Feet)
 
 module Floor where
-
-  -- Length and Width and price per unit. For now, we'll accept the imprecise floating points.
 
   type Feet = Double
   type Area = Double
@@ -31,4 +25,5 @@ module Floor where
   totalCost :: Area -> Price -> Double
   totalCost a p = a * p 
 
+  test :: String
   test = show (totalCost (area len width) price)

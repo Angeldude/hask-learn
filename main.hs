@@ -18,4 +18,4 @@ module Main where
 
   main :: IO()
   main = do 
-      putStrLn $ show (totalCost (area 4.0 3.0) 1.5)
+      print $ show (totalCost (area 4.0 3.0) 1.5)

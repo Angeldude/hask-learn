@@ -4,18 +4,10 @@
 -- allow for geometric shape of floor, build api response, GUI front end (html?)
 -- expand on measuring unit (Allow more than just Feet)
 
-module Main where
+module Lib(area', totalCost) where
 
-  type Feet = Double
-  type Area = Double
-  type Price = Double
+  area' :: Double -> Double -> Double
+  area' l w = l * w
 
-  area :: Feet -> Feet -> Area
-  area l w = l * w
-
-  totalCost :: Area -> Price -> Double
+  totalCost :: Double -> Double -> Double
   totalCost a p = a * p 
-
-  main :: IO()
-  main = do 
-      print $ show (totalCost (area 4.0 3.0) 1.5)

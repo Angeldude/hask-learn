@@ -2,3 +2,5 @@
 *.o
 main.exe
 main
+.DS_Store
+.stack-work
